@@ -4,7 +4,7 @@ module Mongoid
 
     included do |base|
       base.field    :ffeec, :type => Integer, :default => 0
-      base.has_many :followees, :class_name => 'Follow', :as => :followee, :dependent => :destroy
+      base.has_many :followees, :class_name => 'Follow', :as => :followee, :dependent => :destroy, optional: true
     end
 
     # follow a model
