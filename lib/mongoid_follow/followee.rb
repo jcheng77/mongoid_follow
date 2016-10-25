@@ -4,7 +4,7 @@ module Mongoid
 
     included do |base|
       base.field    :fferc, :type => Integer, :default => 0
-      base.has_many :followers, :class_name => 'Follow', :as => :follower, :dependent => :destroy
+      base.has_many :followers, :class_name => 'Follow', :as => :follower, :dependent => :destroy , optional: true
     end
 
     # know if self is followed by model
